@@ -1,0 +1,52 @@
+first need to dump the board into a prrogrammer friendly format 
+	possible an array for each row and each column and each box
+	this will have duplicates but could bve updated at once when a now piece is added.
+
+
+this need to build the not possilbe / possible arrays for each square 
+
+when find a square that has only one possilbe piece then use place the piece 
+ubdate all of the data structors 
+
+
+also need to have the places in the box that need to be accounted for 
+
+class board 
+	base double array of pieces 
+	arrays for columns 
+	arrays for the boxes 
+
+	update method(number , cord1 , cord2);
+		updeate the base arrays 
+		update the columns 
+		update the boxes 
+	update the base method (number cord 1 , cord2 ){
+		insert into the array based on the cords 
+	}
+	update the columns{
+		maybe just use the base array for this like in the starter program 
+	}
+	update the boxes{
+		box0[9] = {\1,2,3,4,5,6,7,8,9};
+		= 
+		{1,2,3}
+		{4,5,6}
+		{7,8,9}
+
+	}
+
+	could be a function but would be harder logic but less setup
+box class 
+	int [9] array for the numbers in the box
+	int boxNum for the lable of the box 
+	int [9] for the order of the number of the in the box reletive to the big box 
+		for the first one would be 0,1,2,9,10,12,18,19,20
+	can return the list of numbers that are in the box for the knownFalse numbers for the solver 
+placeInBox class 
+	looks the same as the box class but is the same square of each box for the 9 numbers in the class.
+
+	int [9] for the order of the number in the first array 
+	the first box would look like this 0,3,6,27,30,33,54,57,60
+	returns the numbers in the array for the knownFalse in the board solver 
+
+
